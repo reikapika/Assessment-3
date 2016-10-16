@@ -1,11 +1,12 @@
-<!doctype html>
-<html>
-<head>
-    <title>Application Response</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<!-- fill this in -->
+{% block title %}Application Response{% endblock %}
 
-</body>
-</html>
+{% block content %}
+  <p style="font-family: sans-serif">Thank you, <i>{{ session['whole_name'] }}</i>, for applying to be a <b>{{ session['job'] }}</b>. Your minimum salary requirement is {{ session['salary'] }} dollars.</p>
+
+{% endblock %}
+
+
+<!-- have tried put whole_name in session
+<p style="font-family: sans-serif">Thank you, <i>{{ session['whole_name'] }}</i>, for applying to be a <b>{{ session['job'] }}</b>. Your minimum salary requirement is {{ session['salary'] }} dollars.</p> -->

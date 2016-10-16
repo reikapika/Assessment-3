@@ -1,16 +1,13 @@
-<!doctype html>
-<html>
-<head>
-  <h1>This Is The Large Heading</h1>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<!-- your html goes here -->
+{% block title %}Application Form{% endblock %}
+
+{% block content %}
+  <h1>This Is The Large Heading</h1>
+
   <i><h4>Please fill out the following form for evaluation.</h4></i>
+
   <form action="/application" method="POST">
-    <title>Skills-HTML-CSS</title>
-    <br>
     <p>Your First Name: <input class="textbox" type="text" name="f_name"></p>
     <b><p>
       Your Last Name: <input class="textbox" type="text" name="l_name">
@@ -18,12 +15,11 @@
     <p >Desired Salary: <input class="textbox" type="text" name="salary"></p>
     <p>You are applying for
       <select name="job">
-        <option value="1">Software Engineer</option>
-        <option value="2">QA Engineer</option>
-        <option value="3">Product Manager</option>
-      </select>
+      <option value="Software Engineer">Software Engineer</option>
+      <option value="QA Engineer">QA Engineer</option>
+      <option value="Product Manager">Product Manager</option>
     </p>
-    <div><input class="button" type="submit"></div>
+     <div><input class="button" type="submit"></div>
   </form>
-</body>
-</html>
+
+{% endblock %}
